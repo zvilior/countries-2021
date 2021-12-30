@@ -1,7 +1,9 @@
 import Header from './Header'
 import CountriesList from './CountriesList'
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, createContext } from 'react'
+
+export const SearchContext = createContext()
 
 export default function Main() {
     const
@@ -26,10 +28,11 @@ export default function Main() {
     )
 
     return <main>
-        <Header
-            setSearchValue={setSearchValue}
-            countriesNum={filteredList.length}
-        />
+        <SearchContext.Provider value={setSearchValue}>
+            <Header
+                countriesNum={filteredList.length}
+            />
+        </SearchContext.Provider>
         <CountriesList list={filteredList} />
     </main>
 }

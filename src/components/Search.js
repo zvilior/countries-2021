@@ -1,6 +1,10 @@
-export default function Search(props) {
+import { SearchContext } from './Main'
+import { useContext } from 'react'
+
+export default function Search() {
+    const v = useContext(SearchContext)
     return <input
-        onChange={e => props.setSearchValue(e.target.value)}
+        onChange={e => v(e.target.value)}
         placeholder='search'
         type='search'
     />
