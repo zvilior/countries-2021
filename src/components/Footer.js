@@ -1,5 +1,11 @@
+import { useContext } from "react"
+import { PopupContext } from "../App"
+
 export default function Footer() {
-    return <footer>
+
+    const [, setPopup] = useContext(PopupContext)
+
+    return <footer onClick={() => setPopup('Yossef')}>
         Footer
     </footer>
 }
