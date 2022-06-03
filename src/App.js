@@ -8,7 +8,7 @@ export const PopupContext = createContext()
 function App() {
 
   const popupState = useState('')
-  //const [popup,setPopup] = useState('start')
+  // const [popup,setPopup] = useState('start')
 
   return <div className='App'>
     <PopupContext.Provider value={popupState}>

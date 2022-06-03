@@ -7,8 +7,7 @@ export default function Popup() {
 
     return <div
         className={`overlay ${popup ? '' : 'close'}`}
-        onClick={() => setPopup('')}
-    >
+        onClick={() => setPopup('')}>
         <div className='popup'>{popup}</div>
     </div>
 }
