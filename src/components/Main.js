@@ -21,7 +21,6 @@ export default function Main() {
     }
 
     if (!list) return 'loading'
-
     const filteredList = list.filter(c =>
         c.name.common
             .toLowerCase()

@@ -22,13 +22,13 @@ export default function Country(props) {
 function CountryOpen(props) {
     const { name = {}, flags = {}, languages = {}, population } = props
 
-    return
-    <div className='countryOpen'>
-        <h2>{name.common}</h2>
-        <img src={flags.svg} />
-        <h4>Population: </h4>
-        <span>{population}</span>
-        <h4>Languages:</h4>
-        <ul>{Object.values(languages).map(l => <li key={l} >{l}</li>)}</ul>
-    </div>
+    return (
+        <div className='countryOpen'>
+            <h2>{name.common}</h2>
+            <img src={flags.svg} />
+            <h4>Population: </h4>
+            <span>{population}</span>
+            <h4>Languages:</h4>
+            <ul>{Object.values(languages).map(l => <li key={l} >{l}</li>)}</ul>
+        </div>)
 }
