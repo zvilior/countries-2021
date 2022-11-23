@@ -5,6 +5,7 @@ import { useEffect, useState, createContext } from 'react'
 
 export const SearchContext = createContext()
 
+
 export default function Main() {
     const
         [list, setList] = useState(),
@@ -27,10 +28,11 @@ export default function Main() {
             .startsWith(searchValue.toLowerCase())
     )
 
-    return <main>
-        <SearchContext.Provider value={setSearchValue}>
-            <Header countriesNum={filteredList.length} />
-        </SearchContext.Provider>
-        <CountriesList list={filteredList} />
-    </main>
+    return (
+        <main>
+            <SearchContext.Provider value={setSearchValue}>
+                <Header countriesNum={filteredList.length} />
+            </SearchContext.Provider>
+            <CountriesList list={filteredList} />
+        </main>)
 }

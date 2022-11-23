@@ -22,7 +22,8 @@ export default function Country(props) {
 function CountryOpen(props) {
     const { name = {}, flags = {}, languages = {}, population } = props
 
-    return <div className='countryOpen'>
+    return
+    <div className='countryOpen'>
         <h2>{name.common}</h2>
         <img src={flags.svg} />
         <h4>Population: </h4>
